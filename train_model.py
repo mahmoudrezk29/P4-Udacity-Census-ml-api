@@ -11,9 +11,9 @@ from model.model import train_model, compute_model_metrics, inference
 
 # Add code to load in the data.
 data = pd.read_csv("data/census_clean.csv")
-# Optional enhancement, use K-fold cross validation 
-train, test = train_test_split(data, 
-                               test_size=0.20, 
+# Optional enhancement, use K-fold cross validation
+train, test = train_test_split(data,
+                               test_size=0.20,
                                random_state=42)
 
 cat_features = [
@@ -26,14 +26,14 @@ cat_features = [
     "sex",
     "native-country",
 ]
-X_train, y_train, encoder, lb = process_data(
-    train, categorical_features=cat_features,
-      label="salary", training=True
-)
+X_train, y_train, encoder, lb = process_data(train,
+                                             categorical_features=cat_features,
+                                             label="salary",
+                                             training=True)
 
 # Proces the test data with the process_data function.
 X_test, y_test, _, _ = process_data(
-    test, categorical_features=cat_features, 
+    test, categorical_features=cat_features,
     label="salary", training=False, encoder=encoder, lb=lb
 )
 
@@ -42,8 +42,8 @@ model = train_model(X_train, y_train)
 preds = inference(model, X_test)
 precision, recall, fbeta = compute_model_metrics(y_test, preds)
 
-print(f"Model performance:\nPrecision: {precision}\nRecall: {recall}\nF1: {fbeta}")
-
+print(f"Model performance:")
+print(f"\nPrecision: {precision} \nRecall: {recall}\nF1: {fbeta}")
 # Save the model
 joblib.dump(model, "model/model.pkl")
 joblib.dump(encoder, "model/encoder.pkl")

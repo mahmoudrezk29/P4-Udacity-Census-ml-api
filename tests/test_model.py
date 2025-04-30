@@ -17,7 +17,7 @@ def test_inference_output_shape():
     preds = inference(model, X)
     assert preds.shape == (2,)
     assert set(preds).issubset({0, 1})
-    
+
 
 def test_compute_model_metrics_returns_floats():
     y_true = np.array([0, 1, 0, 1])
