@@ -42,7 +42,7 @@ model = train_model(X_train, y_train)
 preds = inference(model, X_test)
 precision, recall, fbeta = compute_model_metrics(y_test, preds)
 
-print(f"Model performance:")
+print("Model performance:")
 print(f"\nPrecision: {precision} \nRecall: {recall}\nF1: {fbeta}")
 # Save the model
 joblib.dump(model, "model/model.pkl")
