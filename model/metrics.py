@@ -1,4 +1,3 @@
-import numpy as np
 from model.model import inference, compute_model_metrics
 from model.data import process_data
 

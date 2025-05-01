@@ -18,6 +18,7 @@ cat_features = [
     "relationship", "race", "sex", "native-country"
 ]
 
+
 class CensusInput(BaseModel):
     age: int
     workclass: str
@@ -54,9 +55,11 @@ class CensusInput(BaseModel):
             }
         }
 
+
 @app.get("/")
 def root():
     return {"message": "Welcome to the Census Income Prediction API!"}
+
 
 @app.post("/predict")
 def predict(data: CensusInput):

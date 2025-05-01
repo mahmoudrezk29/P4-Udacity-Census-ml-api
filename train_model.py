@@ -64,4 +64,3 @@ with open("slice_output.txt", "w") as f:
     for line in slice_results:
         print(line)
         f.write(line + "\n")
-        
