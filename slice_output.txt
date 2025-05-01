@@ -1,0 +1,16 @@
+[education = Some-college] -> Precision: 0.6906, Recall: 0.3466, F1: 0.4615
+[education = HS-grad] -> Precision: 0.7692, Recall: 0.1739, F1: 0.2837
+[education = Bachelors] -> Precision: 0.7151, Recall: 0.7978, F1: 0.7542
+[education = Masters] -> Precision: 0.8128, Recall: 0.8599, F1: 0.8357
+[education = Assoc-acdm] -> Precision: 0.5625, Recall: 0.5745, F1: 0.5684
+[education = 7th-8th] -> Precision: 0.2500, Recall: 0.1667, F1: 0.2000
+[education = 11th] -> Precision: 0.6667, Recall: 0.3636, F1: 0.4706
+[education = Assoc-voc] -> Precision: 0.6731, Recall: 0.5556, F1: 0.6087
+[education = Prof-school] -> Precision: 0.8554, Recall: 0.8452, F1: 0.8503
+[education = 9th] -> Precision: 0.5000, Recall: 0.3333, F1: 0.4000
+[education = 5th-6th] -> Precision: 0.5000, Recall: 0.5000, F1: 0.5000
+[education = 10th] -> Precision: 0.6000, Recall: 0.2500, F1: 0.3529
+[education = Doctorate] -> Precision: 0.8364, Recall: 0.8070, F1: 0.8214
+[education = 12th] -> Precision: 0.4000, Recall: 0.4000, F1: 0.4000
+[education = 1st-4th] -> Precision: 0.0000, Recall: 1.0000, F1: 0.0000
+[education = Preschool] -> Precision: 1.0000, Recall: 1.0000, F1: 1.0000

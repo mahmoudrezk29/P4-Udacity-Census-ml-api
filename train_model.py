@@ -7,7 +7,7 @@ import pandas as pd
 
 from model.data import process_data
 from model.model import train_model, compute_model_metrics, inference
-
+from model.metrics import compute_sliced_metrics
 
 # Add code to load in the data.
 data = pd.read_csv("data/census_clean.csv")
@@ -48,3 +48,20 @@ print(f"\nPrecision: {precision} \nRecall: {recall}\nF1: {fbeta}")
 joblib.dump(model, "model/model.pkl")
 joblib.dump(encoder, "model/encoder.pkl")
 joblib.dump(lb, "model/lb.pkl")
+
+# Evaluate slice metrics
+slice_results = compute_sliced_metrics(
+    model=model,
+    data=test,
+    feature="education",  # You can change this to any categorical feature
+    cat_features=cat_features,
+    label="salary",
+    encoder=encoder,
+    lb=lb
+)
+
+with open("slice_output.txt", "w") as f:
+    for line in slice_results:
+        print(line)
+        f.write(line + "\n")
+        
