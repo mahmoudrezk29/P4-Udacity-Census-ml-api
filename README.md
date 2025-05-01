@@ -21,12 +21,6 @@ The model predicts whether an individual's income exceeds $50K/year based on dem
 - Continuous Deployment to Render
 - Model card compliant with [Model Cards for Model Reporting (Mitchell et al.)](https://arxiv.org/abs/1810.03993)
 
----
-
-## 📁 Project Structure
-
-. ├── api/ # FastAPI app with GET/POST endpoints ├── model/ # Training logic, encoders, metrics ├── tests/ # Unit tests for model and API ├── data/ # Input and cleaned data ├── model_card.md # Completed model card ├── slice_output.txt # Slice metrics on 'education' feature ├── train_model.py # Script to train model and save artifacts ├── post_live.py # Script to test deployed POST endpoint ├── render.yaml # Render deployment config ├── requirements.txt └── README.md
-
 
 ---
 
