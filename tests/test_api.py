@@ -3,10 +3,13 @@ from api.main import app
 
 client = TestClient(app)
 
+
 def test_get_root():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"message": "Welcome to the Census Income Prediction API!"}
+    assert response.json() == {
+        "message": "Welcome to the Census Income Prediction API!"}
+
 
 def test_post_prediction_over_50k():
     payload = {
@@ -28,6 +31,7 @@ def test_post_prediction_over_50k():
     response = client.post("/predict", json=payload)
     assert response.status_code == 200
     assert response.json()["prediction"] in [">50K", "<=50K"]
+
 
 def test_post_prediction_under_50k():
     payload = {

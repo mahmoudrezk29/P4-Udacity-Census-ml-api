@@ -2,9 +2,11 @@ from model.model import inference, compute_model_metrics
 from model.data import process_data
 
 
-def compute_sliced_metrics(model, data, feature, cat_features, label, encoder, lb):
+def compute_sliced_metrics(model, data, feature,
+                           cat_features, label, encoder, lb):
     """
-    Compute and log metrics on slices of the data based on a categorical feature.
+    Compute and log metrics on slices of the data 
+    based on a categorical feature.
     """
     results = []
     unique_vals = data[feature].unique()
