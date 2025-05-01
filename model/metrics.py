@@ -5,7 +5,7 @@ from model.data import process_data
 def compute_sliced_metrics(model, data, feature,
                            cat_features, label, encoder, lb):
     """
-    Compute and log metrics on slices of the data 
+    Compute and log metrics on slices of the data
     based on a categorical feature.
     """
     results = []
