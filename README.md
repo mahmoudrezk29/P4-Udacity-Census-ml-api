@@ -1,7 +1,6 @@
 # Census Income Prediction API
 
-- project link: https://github.com/mahmoudrezk29/P4-Udacity-Census-ml-api
-
+- project link: https://github.com/mahmoudrezk29/Census_Income_Prediction-API
 
 
 This project demonstrates an end-to-end MLOps pipeline for deploying a machine learning model using FastAPI and GitHub Actions, with cloud deployment on Render.
